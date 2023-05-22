@@ -1,0 +1,95 @@
+body,
+html {
+  // width: 100vw;
+  overflow-x: hidden;
+  font-size: 18px;
+}
+
+.html {
+  width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  min-height: 100vh;
+  margin: auto 16px;
+
+  &-element {
+    padding: 0 8px;
+
+    img {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+  }
+
+  &-card {
+    border-radius: 8px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &-download-info {
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    margin-top: 16px;
+    padding: 20px;
+    text-align: center;
+
+    p {
+      font-family: 'PingFang SC';
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 28px;
+      font-size: bolder;
+    }
+  }
+
+  &-mobile-phone {
+    width: 200px !important;
+    margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    h1 {
+      font-size: 110px;
+    }
+    &-card {
+      border-radius: 32px;
+      box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.2);
+      padding: 32px;
+    }
+
+    &-download-info {
+      margin-top: 32px;
+      p {
+        width: 80%;
+        font-size: 96px !important;
+      }
+    }
+
+    &-mobile-phone {
+      width: 80% !important;
+      margin-top: 40px;
+    }
+
+    &-element {
+      border-radius: 32px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

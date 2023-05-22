@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>测试项目</title>
+  <script>
+    document.addEventListener('mousewheel', function (e) {
+      e = e || window.event;
+      if ((e.wheelDelta && event.ctrlKey) || e.detail) {
+        event.preventDefault();
+      }
+    }, {
+      capture: false,
+      passive: false
+    });
+    document.addEventListener('keydown', function (event) {
+      if ((event.ctrlKey === true || event.metaKey === true)
+        && (event.keyCode === 61 || event.keyCode === 107
+          || event.keyCode === 173 || event.keyCode === 109
+          || event.keyCode === 187 || event.keyCode === 189)) {
+        event.preventDefault();
+      }
+    }, false);
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="hidden">
+    <script type="text/javascript">
+      var images = new Array()
+      function preload() {
+       for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+       }
+      }
+      preload(
+       "https://zbs-static.oss-cn-zhangjiakou.aliyuncs.com/yq-desktop/images/index-bg-animation.webp",
+       "https://zbs-static.oss-cn-zhangjiakou.aliyuncs.com/yq-desktop/images/world-map.png",
+       "https://zbs-static.oss-cn-zhangjiakou.aliyuncs.com/yq-desktop/images/word-map-animate.webp",
+       "https://zbs-static.oss-cn-zhangjiakou.aliyuncs.com/yq-desktop/images/modal-detail-background-image.png"
+      )
+    </script>
+   </div>
+  <div id="root"></div>
+</body>
+
+</html>
